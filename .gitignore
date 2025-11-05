@@ -1,0 +1,9 @@
+# Ignore copy pages directory
+NGDcopypages/
+
+# Ignore markdown documentation files
+*.md
+
+# Ignore template and hero comparison files
+Template.html
+hero.html
