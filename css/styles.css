@@ -1,0 +1,670 @@
+/*
+Next Gen Dental - Custom Styles
+Improved and optimized for modern design
+*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,900,500,700);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'sans-serif', arial;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Roboto', 'sans-serif';
+    -webkit-font-smoothing: antialiased;
+    background: #fff;
+    margin-top: 60px;
+}
+
+::selection {
+    color: #fff;
+    background: #3498DB;
+}
+
+::-moz-selection {
+    color: #fff;
+    background: #3498DB;
+}
+
+p {
+    color: #858585;
+}
+
+.pDark p {
+    color: #2B2B2B;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+a {
+    color: #3498DB;
+    text-decoration: none;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+a:hover {
+    color: #2980B9;
+    text-decoration: none;
+}
+
+.btn {
+    border: 0px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #2980B9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-primary {
+    background: #3498DB;
+}
+
+.form-control {
+    border-radius: 4px;
+}
+
+.mrgn30 {
+    margin: 30px 0;
+}
+
+.copyright {
+    color: #BDC3C7;
+    background: #1a252f;
+    padding: 20px 0;
+}
+
+#top {
+    position: relative;
+}
+
+.topHome {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 5;
+    background-color: #3498DB;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.topHome:hover {
+    background-color: #2980B9;
+    transform: translateY(-3px);
+}
+
+/* ========================================
+   IMPROVED STICKY NAVIGATION
+   ======================================== */
+
+.header {
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+/* Scrolled state - add background and shadow */
+.header.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.header.scrolled .navbar-brand {
+    color: #2C3E50 !important;
+}
+
+.header.scrolled .navbar-inverse .navbar-nav > li > a {
+    color: #546E7A !important;
+}
+
+.header.scrolled .navbar-inverse .navbar-nav > .active > a,
+.header.scrolled .navbar-inverse .navbar-nav > .active > a:hover {
+    color: #3498DB !important;
+}
+
+.header .navbar-brand {
+    margin-left: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #3498DB;
+    background-color: #3498DB;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background: #2980B9;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #3498DB !important;
+}
+
+.header .navbar-brand {
+    float: left;
+    padding: 16px 15px;
+    line-height: 18px;
+    height: 50px;
+}
+
+.logo {
+    font-size: 1.4em;
+    text-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    color: #3498DB !important;
+}
+
+.header .navbar {
+    margin: 0;
+    background: transparent;
+    border: 0;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #3498DB;
+    background: transparent;
+}
+
+.navbar-nav > li:hover,
+.navbar-nav > li a:hover {
+    color: #3498DB;
+}
+
+.header .navbar-nav > li > a {
+    padding: 25px 18px;
+}
+
+.page-section {
+    width: 100%;
+    height: auto;
+    padding: 0 0 0 0;
+}
+
+.page-section h1 {
+    font-size: 3.5em;
+    margin: 90px 0 30px;
+    line-height: 1.2em;
+}
+
+.page-section h2 {
+    color: #2C3E50;
+}
+
+.page-section p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+}
+
+.darkBg {
+    background: #34495E;
+}
+
+.heading {
+    padding-bottom: 30px;
+}
+
+.heading p {
+    font-size: 1.2em;
+}
+
+/* ========================================
+   HERO MESH GRADIENT BACKGROUND
+   ======================================== */
+
+.hero-gradient {
+    background:
+        radial-gradient(circle at 20% 30%, rgba(52, 152, 219, 0.8) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(93, 173, 226, 0.7) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(44, 62, 80, 0.9) 0%, transparent 80%),
+        linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(ellipse at 60% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 40%),
+        radial-gradient(ellipse at 40% 80%, rgba(93, 173, 226, 0.15) 0%, transparent 50%);
+    animation: meshPulse 10s ease-in-out infinite alternate;
+}
+
+@keyframes meshPulse {
+    0% { opacity: 0.5; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.05); }
+}
+
+.mesh-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: blobFloat 20s ease-in-out infinite;
+}
+
+.mesh-blob.blob-1 {
+    width: 500px;
+    height: 500px;
+    background: #3498DB;
+    top: -10%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.mesh-blob.blob-2 {
+    width: 400px;
+    height: 400px;
+    background: #5DADE2;
+    bottom: -15%;
+    right: -5%;
+    animation-delay: 5s;
+}
+
+.mesh-blob.blob-3 {
+    width: 350px;
+    height: 350px;
+    background: rgba(255,255,255,0.3);
+    top: 40%;
+    right: 20%;
+    animation-delay: 10s;
+}
+
+@keyframes blobFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(50px, -50px) scale(1.1); }
+    66% { transform: translate(-30px, 30px) scale(0.9); }
+}
+
+.hero-gradient .container {
+    position: relative;
+    z-index: 5;
+}
+
+.hero-gradient h1,
+.hero-gradient .lead,
+.hero-gradient h4,
+.hero-gradient p {
+    color: #FFFFFF;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* ========================================
+   MODERN SERVICE CARDS
+   ======================================== */
+
+.service-card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: none;
+    margin-bottom: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.service-card i {
+    font-size: 56px;
+    color: #3498DB;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2C3E50;
+    margin-bottom: 15px;
+    font-variant: normal;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #546E7A;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   GRADIENT CTA BOX
+   ======================================== */
+
+.cta-gradient-box {
+    background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);
+    border-radius: 16px;
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    border: none;
+    margin-top: 40px;
+}
+
+.cta-gradient-box h3 {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-top: 0;
+    font-variant: normal;
+}
+
+.cta-gradient-box p {
+    color: rgba(255,255,255,0.95);
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.cta-gradient-box .btn-white {
+    background: white;
+    color: #3498DB;
+    border: none;
+    padding: 16px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.cta-gradient-box .btn-white:hover {
+    background: rgba(255,255,255,0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.cta-gradient-box small {
+    display: block;
+    margin-top: 15px;
+    color: rgba(255,255,255,0.85);
+    font-size: 15px;
+}
+
+/* ========================================
+   ENLARGED CORE SERVICES (with tick marks)
+   ======================================== */
+
+.core-service-item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.core-service-item i {
+    font-size: 56px !important;
+    margin-right: 20px !important;
+}
+
+/* ========================================
+   IMPROVED TURNAROUND TIMES - TICK MARK CARDS
+   ======================================== */
+
+.turnaround-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 50px 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.turnaround-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Service name */
+.service-name {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.3;
+}
+
+/* Turnaround time badge */
+.turnaround-time {
+    display: inline-block;
+    background: #3498DB;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 10px rgba(52, 152, 219, 0.4);
+}
+
+/* Priority card styling */
+.priority-card {
+    border-color: #F39C12;
+    background: rgba(243, 156, 18, 0.08);
+}
+
+.priority-card:hover {
+    background: rgba(243, 156, 18, 0.12);
+    border-color: #F39C12;
+}
+
+.priority-time {
+    background: linear-gradient(135deg, #F39C12 0%, #E67E22 100%);
+    box-shadow: 0 3px 10px rgba(243, 156, 18, 0.4);
+}
+
+/* ========================================
+   PROCESS TIMELINE
+   ======================================== */
+
+.process-timeline {
+    position: relative;
+    padding: 40px 0;
+}
+
+.timeline-step {
+    position: relative;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.timeline-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #3498DB;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.timeline-icon:hover {
+    background-color: #2C3E50;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4);
+}
+
+.timeline-icon i {
+    color: white;
+    font-size: 32px;
+}
+
+.timeline-number {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #27AE60;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* ========================================
+   MODAL ENHANCEMENTS
+   ======================================== */
+
+.modal-content {
+    border-radius: 8px;
+    border: none;
+}
+
+.modal-header {
+    border-radius: 8px 8px 0 0;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    body {
+        margin-top: 50px;
+    }
+
+    .service-card {
+        margin-bottom: 20px;
+    }
+
+    .turnaround-card {
+        min-height: 180px;
+        margin-bottom: 20px;
+        padding: 40px 20px;
+    }
+
+    .hero-gradient h1 {
+        font-size: 2.2em !important;
+    }
+
+    .hero-gradient .lead {
+        font-size: 1.2em !important;
+    }
+
+    .mesh-blob {
+        width: 250px !important;
+        height: 250px !important;
+    }
+
+    .cta-gradient-box {
+        padding: 40px 25px;
+    }
+
+    .cta-gradient-box h3 {
+        font-size: 24px;
+    }
+
+    .core-service-item {
+        font-size: 18px;
+    }
+
+    .core-service-item i {
+        font-size: 48px !important;
+    }
+
+    .service-name {
+        font-size: 20px;
+    }
+
+    .turnaround-time {
+        font-size: 15px;
+        padding: 10px 22px;
+    }
+
+    .timeline-step {
+        margin-bottom: 30px;
+    }
+
+    .header .navbar-brand {
+        font-size: 20px;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+        font-size: 1em;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Print styles */
+@media print {
+    .header, .topHome, button, .btn {
+        display: none;
+    }
+}

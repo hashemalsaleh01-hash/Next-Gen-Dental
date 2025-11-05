@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en-gb" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Next Gen Dental | Melbourne Denture Clinic & Dental Laboratory | Campbellfield VIC</title>
+	<meta name="description" content="Next Gen Dental offers expert denture services directly to patients and rapid, high-quality lab fabrication for dental professionals in Melbourne. Same-day repairs, digital workflow, 2-3 day turnaround. Campbellfield, VIC.">
+	<meta name="keywords" content="denture clinic Melbourne, dental laboratory, prosthetist, denture repairs, retainers, splints, nightguards, Campbellfield">
+	<meta name="author" content="Next Gen Dental">
+
+<link rel="stylesheet" href="css/bootstrap.min.css" />     
+<link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />	
+<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/da-slider.css" />
+<link rel="stylesheet" href="css/styles.css"/>
+<!-- Font Awesome -->
+<link href="font/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- IMPROVED STICKY NAVIGATION -->
+<header class="header sticky-nav">
+	<div class="container">
+		<nav class="navbar navbar-inverse" role="navigation">
+        	<div class="navbar-header">
+	            <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+	            </button>
+	           <a href="#top" class="navbar-brand scroll-top logo">NEXT GEN DENTAL</a>
+        	</div>
+	        <div id="main-nav" class="collapse navbar-collapse">
+	            <ul class="nav navbar-nav" id="mainNav">
+    <li class="active"><a href="#home" class="scroll-link">Home</a></li>
+    <li><a href="#why-choose" class="scroll-link">Why Choose Us</a></li>
+    <li><a href="#clinic" class="scroll-link">Denture Clinic</a></li>
+    <li><a href="#process" class="scroll-link">Process</a></li>
+    <li><a href="#lab" class="scroll-link">Dental Lab</a></li>
+    <li><a href="#contact" class="scroll-link">Contact</a></li>
+</ul>
+	        </div>
+	    </nav>
+	</div>
+</header>
+
+<!-- Patient Inquiry Modal -->
+<div class="modal fade" id="patientModal" tabindex="-1" role="dialog" aria-labelledby="patientModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #2C3E50; color: white;">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white; opacity: 0.8;"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="patientModalLabel">Book Your Complimentary Consultation</h4>
+      </div>
+      <div class="modal-body">
+        <p style="margin-bottom: 20px; color: #666;">Ready to restore your smile? Fill out the form below and we'll contact you within 24 hours to schedule your consultation.</p>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="patientForm">
+          <input type="hidden" name="_subject" value="New Patient Inquiry - Next Gen Dental">
+          <input type="hidden" name="_next" value="thank-you.html">
+          <input type="hidden" name="form_type" value="Patient Inquiry">
+
+          <div class="form-group">
+            <label for="patient_name">Full Name *</label>
+            <input type="text" class="form-control" id="patient_name" name="name" required placeholder="Your full name">
+          </div>
+
+          <div class="form-group">
+            <label for="patient_email">Email Address *</label>
+            <input type="email" class="form-control" id="patient_email" name="email" required placeholder="your.email@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="patient_phone">Phone Number *</label>
+            <input type="tel" class="form-control" id="patient_phone" name="phone" required placeholder="0433 XXX XXX">
+          </div>
+
+          <div class="form-group">
+            <label for="patient_service">Service Interest *</label>
+            <select class="form-control" id="patient_service" name="service_interest" required>
+              <option value="">Please select...</option>
+              <option value="New Full Dentures">New Full Dentures</option>
+              <option value="Partial Dentures">Partial Dentures</option>
+              <option value="Implant Overdentures">Implant Overdentures</option>
+              <option value="Denture Reline">Denture Reline</option>
+              <option value="Denture Repair">Denture Repair</option>
+              <option value="Immediate Dentures">Immediate Dentures</option>
+              <option value="General Inquiry">General Inquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="patient_message">Tell Us About Your Needs</label>
+            <textarea class="form-control" id="patient_message" name="message" rows="4" placeholder="Share any concerns or questions you have about your denture care..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <input type="checkbox" name="health_fund" value="yes"> I have private health insurance
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #3498DB; border: none;">Submit Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Dental Professional Modal -->
+<div class="modal fade" id="dentistModal" tabindex="-1" role="dialog" aria-labelledby="dentistModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #2C3E50; color: white;">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white; opacity: 0.8;"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="dentistModalLabel">Partner With Next Gen Dental Lab</h4>
+      </div>
+      <div class="modal-body">
+        <p style="margin-bottom: 20px; color: #666;">Join our network of dental professionals. Complete the form below to receive our partnership information and price list.</p>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="dentistForm">
+          <input type="hidden" name="_subject" value="New Dental Professional Inquiry - Next Gen Dental">
+          <input type="hidden" name="_next" value="thank-you.html">
+          <input type="hidden" name="form_type" value="Lab Partnership Inquiry">
+
+          <div class="form-group">
+            <label for="dentist_practice">Practice Name *</label>
+            <input type="text" class="form-control" id="dentist_practice" name="practice_name" required placeholder="Your dental practice name">
+          </div>
+
+          <div class="form-group">
+            <label for="dentist_name">Your Name *</label>
+            <input type="text" class="form-control" id="dentist_name" name="name" required placeholder="Dr. John Smith">
+          </div>
+
+          <div class="form-group">
+            <label for="dentist_email">Email Address *</label>
+            <input type="email" class="form-control" id="dentist_email" name="email" required placeholder="your.email@practice.com.au">
+          </div>
+
+          <div class="form-group">
+            <label for="dentist_phone">Phone Number *</label>
+            <input type="tel" class="form-control" id="dentist_phone" name="phone" required placeholder="0433 XXX XXX">
+          </div>
+
+          <div class="form-group">
+            <label for="dentist_service">Service Needed *</label>
+            <select class="form-control" id="dentist_service" name="service_needed" required>
+              <option value="">Please select...</option>
+              <option value="Full/Partial Dentures">Full/Partial Dentures</option>
+              <option value="Orthodontic Retainers">Orthodontic Retainers</option>
+              <option value="Splints/Nightguards">Splints/Nightguards</option>
+              <option value="Custom Sports Mouthguards">Custom Sports Mouthguards</option>
+              <option value="General Partnership Inquiry">General Partnership Inquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="dentist_message">Message / Case Details</label>
+            <textarea class="form-control" id="dentist_message" name="message" rows="4" placeholder="Tell us about your lab needs, typical case volume, or specific questions..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #3498DB; border: none;">Submit Partnership Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HERO SECTION -->
+<section id="home" class="hero-gradient" style="padding: 150px 0 120px;">
+    <!-- Animated mesh gradient blobs -->
+    <div class="mesh-blob blob-1"></div>
+    <div class="mesh-blob blob-2"></div>
+    <div class="mesh-blob blob-3"></div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h1 style="font-size: 3.5em; font-weight: 700; margin-bottom: 25px; color: white;">
+                    Trusted Quality. Same-Day Repairs. Your Perfect Smile Starts Here.
+                </h1>
+                <p class="lead" style="font-size: 1.6em; margin-bottom: 50px; color: rgba(255,255,255,0.95);">
+                    Melbourne's on-site dental lab delivers faster turnaround, perfect fit, and natural aesthetics.
+                </p>
+                <div style="margin-top: 40px;">
+                    <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#patientModal" style="background-color: #3498DB; color: white; border: none; margin-right: 20px; margin-bottom: 15px; padding: 18px 45px; font-size: 20px; font-weight: 600; border-radius: 8px; box-sizing: border-box;">
+                        <i class="fa fa-calendar"></i> Book Free Consultation
+                    </button>
+                    <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#dentistModal" style="background-color: transparent; color: white; border: 3px solid white; padding: 15px 42px; font-size: 20px; font-weight: 600; border-radius: 8px; box-sizing: border-box; margin-bottom: 15px;">
+                        <i class="fa fa-handshake-o"></i> Lab Partnership Inquiry
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE US SECTION -->
+<section id="why-choose" style="background-color: #FFFFFF; padding: 80px 0;">
+    <div class="container">
+        <div class="heading text-center">
+            <h2 style="color: #2C3E50; margin-bottom: 15px;">Why Choose Next Gen Dental</h2>
+            <p style="color: #546E7A; font-size: 1.2em; max-width: 800px; margin: 0 auto 60px;">
+                Next Gen Dental combines a patient-focused denture clinic with a precision dental laboratory under one roof. With 5 years of industry experience, our independent practice delivers personalized care and rapid turnaround times that larger facilities simply can't match.
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 text-center" style="margin-bottom: 40px;">
+                <i class="fa fa-user-md" style="font-size: 64px; color: #3498DB; margin-bottom: 20px;"></i>
+                <h3 style="color: #2C3E50; font-size: 24px; font-weight: 700; margin-bottom: 15px;">Direct Prosthetist Care</h3>
+                <p style="color: #546E7A; font-size: 17px; line-height: 1.6;">Expert clinical fittings and adjustments on-site for optimal comfort.</p>
+            </div>
+            <div class="col-md-4 text-center" style="margin-bottom: 40px;">
+                <i class="fa fa-flask" style="font-size: 64px; color: #3498DB; margin-bottom: 20px;"></i>
+                <h3 style="color: #2C3E50; font-size: 24px; font-weight: 700; margin-bottom: 15px;">In-House Dental Lab</h3>
+                <p style="color: #546E7A; font-size: 17px; line-height: 1.6;">Guaranteed fast turnaround with precision quality control.</p>
+            </div>
+            <div class="col-md-4 text-center" style="margin-bottom: 40px;">
+                <i class="fa fa-cogs" style="font-size: 64px; color: #3498DB; margin-bottom: 20px;"></i>
+                <h3 style="color: #2C3E50; font-size: 24px; font-weight: 700; margin-bottom: 15px;">Advanced Digital Workflow</h3>
+                <p style="color: #546E7A; font-size: 17px; line-height: 1.6;">CAD/CAM technology for superior, consistent results.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DENTURE CLINIC SERVICES SECTION -->
+<section id="clinic" style="background-color: #F7F9FB; padding: 80px 0;">
+    <div class="container">
+        <div class="heading text-center">
+            <h2 style="color: #2C3E50;">Denture Solutions for Every Need</h2>
+            <p style="color: #546E7A; font-size: 1.2em;">Providing the highest standard of compassionate care and precision-fitted dentures directly to patients.</p>
+        </div>
+
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-4 col-sm-6">
+                <div class="service-card">
+                    <i class="fa fa-smile-o"></i>
+                    <h3>Full Dentures</h3>
+                    <p>Get your confidence back with natural-looking dentures that fit perfectly and let you eat, speak, and smile comfortably.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="service-card">
+                    <i class="fa fa-th"></i>
+                    <h3>Partial Dentures</h3>
+                    <p>Precision-designed partials restore missing teeth and maintain adjacent tooth alignment for a seamless, comfortable fit.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="service-card">
+                    <i class="fa fa-anchor"></i>
+                    <h3>Implant-Supported Dentures</h3>
+                    <p>Stable, secure dentures retained by dental implants, offering maximum retention and confidence.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="service-card">
+                    <i class="fa fa-wrench"></i>
+                    <h3>Relines & Repairs</h3>
+                    <p>Same-day services for denture repairs, relines, and adjustments to ensure a comfortable and effective fit.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="service-card">
+                    <i class="fa fa-clock-o"></i>
+                    <h3>Immediate Dentures</h3>
+                    <p>Don't go a day without teeth—get temporary dentures the same day as extractions, ensuring you never go without.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="service-card">
+                    <i class="fa fa-shield"></i>
+                    <h3> Mouthguards & Nightguards</h3>
+                    <p>Precision-fitted protection for sports or teeth grinding, custom-made for optimal comfort and effectiveness.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Box -->
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="cta-gradient-box">
+                    <h3>Not Sure Which Option Is Right for You?</h3>
+                    <p>Book a free consultation and we'll create a personalized treatment plan.</p>
+                    <button type="button" class="btn btn-white" data-toggle="modal" data-target="#patientModal">
+                        <i class="fa fa-calendar"></i> Book Free Consultation
+                    </button>
+                    <small>We accept all major health funds and offer flexible payment options</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PATIENT PROCESS SECTION -->
+<section id="process" style="background-color: #FFFFFF; padding: 80px 0;">
+    <div class="container">
+        <div class="heading text-center">
+            <h2 style="color: #2C3E50;">Your Journey to a Perfect Smile</h2>
+            <p style="color: #546E7A; font-size: 1.2em;">A simple, straightforward journey to your perfect smile. Typical timeline: 4-6 weeks from consultation to final fitting.</p>
+        </div>
+
+        <div class="process-timeline" style="margin-top: 50px;">
+            <div class="row">
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="timeline-step">
+                        <div class="timeline-number">1</div>
+                        <div class="timeline-icon">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <h4 style="color: #2C3E50; font-weight: 600;">Free Consultation</h4>
+                        <p style="color: #546E7A; font-size: 14px;">No-obligation assessment and explanation of options</p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="timeline-step">
+                        <div class="timeline-number">2</div>
+                        <div class="timeline-icon">
+                            <i class="fa fa-clipboard"></i>
+                        </div>
+                        <h4 style="color: #2C3E50; font-weight: 600;">Assessment</h4>
+                        <p style="color: #546E7A; font-size: 14px;">Gentle evaluation and answering all questions</p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="timeline-step">
+                        <div class="timeline-number">3</div>
+                        <div class="timeline-icon">
+                            <i class="fa fa-file-text-o"></i>
+                        </div>
+                        <h4 style="color: #2C3E50; font-weight: 600;">Treatment Plan</h4>
+                        <p style="color: #546E7A; font-size: 14px;">Customized plan with transparent pricing</p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="timeline-step">
+                        <div class="timeline-number">4</div>
+                        <div class="timeline-icon">
+                            <i class="fa fa-flask"></i>
+                        </div>
+                        <h4 style="color: #2C3E50; font-weight: 600;">Fabrication</h4>
+                        <p style="color: #546E7A; font-size: 14px;">Precision crafting in our on-site lab</p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="timeline-step">
+                        <div class="timeline-number">5</div>
+                        <div class="timeline-icon">
+                            <i class="fa fa-check-circle"></i>
+                        </div>
+                        <h4 style="color: #2C3E50; font-weight: 600;">Final Fitting</h4>
+                        <p style="color: #546E7A; font-size: 14px;">Adjustments and care instructions</p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="timeline-step">
+                        <div class="timeline-number">6</div>
+                        <div class="timeline-icon" style="background-color: #27AE60;">
+                            <i class="fa fa-heart"></i>
+                        </div>
+                        <h4 style="color: #2C3E50; font-weight: 600;">Ongoing Support</h4>
+                        <p style="color: #546E7A; font-size: 14px;">We're here whenever you need us</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 50px;">
+            <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#patientModal" style="background-color: #3498DB; color: white; border: none; padding: 18px 45px; font-size: 20px; font-weight: 600; border-radius: 8px;">
+                <i class="fa fa-play"></i> Start Your Journey Today
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- DENTAL LAB SERVICES SECTION -->
+<section id="lab" class="page-section" style="background-color: #2C3E50; padding: 80px 0; color: white;">
+    <div class="container">
+        <div class="heading text-center">
+            <h2 style="color: white;">Minimize Chair Time. Maximize Patient Satisfaction.</h2>
+            <p style="color: #BDC3C7; font-size: 1.2em;">Reliable lab partnership with rapid turnaround and precision quality.</p>
+        </div>
+
+        <!-- Core Services with Larger Icons/Text -->
+        <div style="margin: 60px 0 50px;">
+            <h3 style="color: white; text-align: center; margin-bottom: 40px; font-size: 32px;">Core Removable Services</h3>
+            <div class="row">
+                <div class="col-md-6" style="margin-bottom: 25px;">
+                    <div class="core-service-item">
+                        <i class="fa fa-check-circle" style="color: #27AE60;"></i>
+                        <span>Precision Denture Fabrication (Full/Partial)</span>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin-bottom: 25px;">
+                    <div class="core-service-item">
+                        <i class="fa fa-check-circle" style="color: #27AE60;"></i>
+                        <span>Orthodontic Retainers (Hawley & Vacuum-Formed)</span>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin-bottom: 25px;">
+                    <div class="core-service-item">
+                        <i class="fa fa-check-circle" style="color: #27AE60;"></i>
+                        <span>Nightguards & Splints</span>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin-bottom: 25px;">
+                    <div class="core-service-item">
+                        <i class="fa fa-check-circle" style="color: #27AE60;"></i>
+                        <span>Custom Sports Mouthguards</span>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin-bottom: 25px;">
+                    <div class="core-service-item">
+                        <i class="fa fa-check-circle" style="color: #27AE60;"></i>
+                        <span>Reline & Repair Services (Priority available)</span>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin-bottom: 25px;">
+                    <div class="core-service-item">
+                        <i class="fa fa-check-circle" style="color: #27AE60;"></i>
+                        <span>Digital Case Processing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMPROVED TURNAROUND TIMES - TICK MARK STYLE -->
+        <div style="margin: 60px 0;">
+            <h3 style="color: white; text-align: center; margin-bottom: 50px; font-size: 32px;">Guaranteed Turnaround Times</h3>
+            
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-3" style="margin-bottom: 30px;">
+                    <div class="turnaround-card">
+                        <h4 class="service-name">Orthodontic Retainers</h4>
+                        <div class="turnaround-time">2-3 Working Days</div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-3" style="margin-bottom: 30px;">
+                    <div class="turnaround-card">
+                        <h4 class="service-name">Nightguards & Splints</h4>
+                        <div class="turnaround-time">2-3 Working Days</div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-3" style="margin-bottom: 30px;">
+                    <div class="turnaround-card">
+                        <h4 class="service-name">Custom Sports Mouthguards</h4>
+                        <div class="turnaround-time">2-3 Working Days</div>
+                    </div>
+                </div>
+
+                <!-- Card 4 - Priority Service -->
+                <div class="col-md-6 col-lg-3" style="margin-bottom: 30px;">
+                    <div class="turnaround-card priority-card">
+                        <h4 class="service-name">Denture Repairs & Relines</h4>
+                        <div class="turnaround-time priority-time">Same-Day Service</div>
+                    </div>
+                </div>
+            </div>
+
+            <p style="text-align: center; color: #BDC3C7; font-size: 16px; margin-top: 30px; font-style: italic;">
+                <i class="fa fa-bolt" style="color: #F39C12;"></i> Priority same-day service available for emergency repairs—call by 9 AM
+            </p>
+        </div>
+
+        <!-- Partnership CTAs -->
+        <div style="margin-top: 60px;">
+            <h3 style="color: white; text-align: center; margin-bottom: 20px; font-size: 28px;">Ready to Partner?</h3>
+            <p style="text-align: center; color: #BDC3C7; font-size: 18px; margin-bottom: 40px;">
+                We accept traditional impressions and digital scans from all major scanners (iTero, Trios, Medit).<br>
+                Same-day pickup available for Melbourne metro practices.
+            </p>
+            <div class="text-center">
+                <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#dentistModal" style="background-color: #3498DB; color: white; border: none; margin-right: 15px; margin-bottom: 15px; padding: 18px 40px; font-size: 18px; font-weight: 600; border-radius: 8px; box-sizing: border-box;">
+                    <i class="fa fa-handshake-o"></i> Request Lab Partnership
+                </button>
+                <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#dentistModal" style="background-color: transparent; color: white; border: 2px solid white; padding: 16px 38px; font-size: 18px; font-weight: 600; border-radius: 8px; box-sizing: border-box; margin-bottom: 15px;">
+                    <i class="fa fa-paper-plane"></i> Submit a Case
+                </button>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<!-- ABOUT SECTION (Trust Badges) -->
+<section id="about" class="page-section team-member" style="background-color: #F7F9FB; padding: 80px 0;">
+    <div class="container">
+    <div class="heading text-center">
+        <h2 style="color: #2C3E50;">About Next Gen Dental: Precision & Partnership</h2>
+        <p style="color: #34495E;">Our commitment is to elevate both patient care and practitioner support through advanced digital dentistry and years of expertise.</p>
+    </div>
+
+    <!-- Trust Badges -->
+    <div class="row" style="margin: 50px 0;">
+        <div class="col-md-3 col-sm-6 text-center" style="margin-bottom: 30px;">
+            <i class="fa fa-certificate fa-3x" style="color: #3498DB; margin-bottom: 15px;"></i>
+            <h4 style="color: #2C3E50; font-weight: 600;">Registered Prosthetist</h4>
+            <p style="color: #34495E;">Fully qualified and licensed professionals</p>
+        </div>
+        <div class="col-md-3 col-sm-6 text-center" style="margin-bottom: 30px;">
+            <i class="fa fa-clock-o fa-3x" style="color: #27AE60; margin-bottom: 15px;"></i>
+            <h4 style="color: #2C3E50; font-weight: 600;">Same-Day Repairs</h4>
+            <p style="color: #34495E;">Emergency services with on-site lab</p>
+        </div>
+        <div class="col-md-3 col-sm-6 text-center" style="margin-bottom: 30px;">
+            <i class="fa fa-desktop fa-3x" style="color: #3498DB; margin-bottom: 15px;"></i>
+            <h4 style="color: #2C3E50; font-weight: 600;">Digital Workflow</h4>
+            <p style="color: #34495E;">CAD/CAM technology for precision</p>
+        </div>
+        <div class="col-md-3 col-sm-6 text-center" style="margin-bottom: 30px;">
+            <i class="fa fa-heart fa-3x" style="color: #27AE60; margin-bottom: 15px;"></i>
+            <h4 style="color: #2C3E50; font-weight: 600;">Patient-Focused Care</h4>
+            <p style="color: #34495E;">Compassionate and personalized service</p>
+        </div>
+    </div>
+
+    <div class="gap" style="height: 50px;"></div>
+</div>
+</section>
+
+
+<!-- CONTACT & FOOTER -->
+<footer class="page-section darkBg" id="contact" style="background-color: #34495E;">
+	<div class="container">
+
+		<div class="row">
+            <div class="heading text-center">
+                <h2 style="color: white;">Visit Us in Campbellfield</h2>
+                <p style="color: #BDC3C7;">Reach out for patient appointments or partnership inquiries.</p>
+            </div>
+        </div>
+
+		<div class="row mrgn30">
+            <!-- Contact Info Column (Left) -->
+            <div class="col-md-6">
+                <div style="margin-bottom: 40px;">
+                    <h3 style="color: white; font-size: 28px; font-weight: 700; margin-bottom: 25px;">Visit Us</h3>
+                    <address style="color: #FFFFFF; font-size: 22px; line-height: 1.6; margin-bottom: 30px;">
+                        <i class="fa fa-map-marker" style="color: #3498DB; margin-right: 12px; font-size: 24px;"></i>
+                        <strong>Unit 26/85 Cooper Street</strong><br>
+                        <span style="margin-left: 36px;">Campbellfield, VIC 3061</span><br>
+                        <span style="margin-left: 36px;">Melbourne, Australia</span>
+                    </address>
+
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="color: white; font-size: 22px; font-weight: 600; margin-bottom: 15px;">Operating Hours</h4>
+                        <p style="color: #BDC3C7; font-size: 18px; line-height: 1.8;">
+                            <i class="fa fa-clock-o" style="color: #3498DB; margin-right: 10px;"></i> Monday - Friday: 9:00 AM - 5:00 PM<br>
+                            <i class="fa fa-times-circle" style="color: #E74C3C; margin-right: 10px; margin-left: 0;"></i> Saturday & Sunday: Closed
+                        </p>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 15px; font-style: italic; margin-top: 10px;">
+                            For urgent denture repairs, contact us early in the day for same-day service.
+                        </p>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 15px; margin-top: 10px;">
+                            <i class="fa fa-check-circle" style="color: #27AE60; margin-right: 8px;"></i> Ample on-site parking available
+                        </p>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="color: white; font-size: 22px; font-weight: 600; margin-bottom: 15px;">Contact</h4>
+                        <p style="color: #BDC3C7; font-size: 18px; line-height: 1.8;">
+                            <i class="fa fa-phone" style="color: #3498DB; margin-right: 10px;"></i> <a href="tel:0433662517" style="color: #3498DB;">0433 662 517</a><br>
+                            <i class="fa fa-envelope-o" style="color: #3498DB; margin-right: 10px;"></i> <a href="mailto:info@nextgendental.com.au" style="color: #3498DB;">info@nextgendental.com.au</a>
+                        </p>
+                    </div>
+
+                    <div style="margin-top: 40px;">
+                        <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#patientModal" style="background-color: #3498DB; color: white; border: none; margin-right: 15px; margin-bottom: 15px; padding: 15px 35px; font-size: 18px; font-weight: 600; min-width: 200px; box-sizing: border-box;">
+                            <i class="fa fa-user"></i> Patient Inquiry
+                        </button>
+                        <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#dentistModal" style="background-color: #27AE60; color: white; border: none; margin-bottom: 15px; padding: 15px 35px; font-size: 18px; font-weight: 600; min-width: 200px; box-sizing: border-box;">
+                            <i class="fa fa-handshake-o"></i> Partner Inquiry
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Map Column (Right) -->
+            <div class="col-md-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.123456789!2d144.95!3d-37.68!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCampbellfield%20VIC%203061!5e0!3m2!1sen!2sau!4v1234567890" width="100%" height="450" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- COPYRIGHT -->
+<section class="copyright" style="background-color: #1a252f; padding: 20px 0;">
+     <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+           <p style="color: #BDC3C7; margin: 0; font-size: 14px;">&copy; 2025 Next Gen Dental. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
+
+<script src="js/modernizr-latest.js"></script>
+<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>    
+<script src="js/bootstrap.min.js" type="text/javascript"></script>	 
+<script src="js/jquery.isotope.min.js" type="text/javascript"></script>
+<script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script> 
+<script src="js/jquery.nav.js" type="text/javascript"></script>
+<script src="js/jquery.cslider.js" type="text/javascript"></script>
+<script src="js/custom.js" type="text/javascript"></script>
+
+<!-- STICKY NAV SCROLL EFFECT -->
+<script>
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 50) {
+        $('.header').addClass('scrolled');
+    } else {
+        $('.header').removeClass('scrolled');
+    }
+});
+</script>
+
+</body>
+</html>
